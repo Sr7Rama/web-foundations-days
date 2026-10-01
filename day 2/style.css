@@ -1,0 +1,192 @@
+/* 1. Global Reset & Body Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+/* 2. Header & Navigation (Flexbox) */
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #34495e;
+  color: #38ef7d;
+}
+
+/* 3. Main Container & Section Cards */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+main > h2 {
+  margin-bottom: 1rem;
+  color: #1a252f;
+}
+
+main > p {
+  margin-bottom: 1.5rem;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2,
+section h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+/* 4. Features List (CSS Grid Cards) */
+ul.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+
+ul.features li {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+/* 5. Shortcuts Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th,
+td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f3f5;
+  font-weight: 600;
+}
+
+/* 6. Form Styles */
+form p {
+  margin-bottom: 1rem;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* 7. Buttons with Transitions */
+button[type="submit"] {
+  background-color: #2c3e50;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #1a252f;
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* 8. Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* 9. Media Query for Small Screens */
+@media (max-width: 600px) {
+  header {
+    padding: 1.25rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+}
